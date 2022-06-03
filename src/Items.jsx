@@ -93,6 +93,7 @@ export default function Items({ props, users }) {
         <Link
           href={`https://forum.freecodecamp.org/t/${props.slug}/${props.id}`}
           variant="subtitle1"
+          target='_blank'
         >
           {props.title}
         </Link>
