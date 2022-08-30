@@ -39,11 +39,13 @@ function App() {
     return temp;
   };
   useEffect(() => {
-    fetch('https://forum-proxy.freecodecamp.rocks/latest')
+    fetch(
+      'https://cors-anywhere.herokuapp.com/https://forum.freecodecamp.org/latest.json'
+    )
       .then((data) => data.json())
       .then((res) => {
         setTopics(res.topic_list.topics);
-        setUsers(res.users)
+        setUsers(res.users);
         setLoading(false);
       });
   }, []);
